@@ -1,0 +1,147 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff; /* Fundo branco */
+  color: #333; /* Texto preto */
+}
+
+#image {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+h1 {
+  margin: 0;
+}
+
+#link-board {
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff; /* Fundo branco */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombreamento leve */
+}
+
+.column {
+  flex: 1;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.column input {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #b6f8ce;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.kanban-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+button {
+  background-color: #4CAF50; /* Verde */
+  color: #fff; /* Texto branco */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049; /* Verde mais escuro */
+}
+
+#todo-column,
+#done-column {
+  background-color: #f9f9f9; /* Cor de fundo ligeiramente diferente */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombreamento mais pronunciado */
+}
+
+/* Adicione essas regras ao seu arquivo CSS */
+
+.task {
+  background-color: #ffffff; /* Cor de fundo do card */
+  border: 1px solid #4CAF50; /* Borda verde do card */
+  margin-bottom: 10px; /* Espaçamento entre os cards */
+  padding: 10px; /* Espaçamento interno do card */
+  position: relative; /* Necessário para posicionar corretamente o botão de edição */
+}
+
+.task h3 {
+  color: #4CAF50 !important; /* Cor do título do card (verde) */
+  margin-bottom: 5px; /* Espaçamento inferior do título */
+}
+
+.edit-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #4CAF50; /* Cor de fundo do botão de edição (verde) */
+  color: #ffffff; /* Cor do texto do botão de edição (branco) */
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+/* Adicione a regra para os comentários */
+.comments {
+  background-color: #baeabc; /* Cor de fundo diferente */
+  padding: 10px; /* Adicione espaçamento interno para melhor aparência */
+  border-top: 1px solid #ddd; /* Adicione uma borda superior para separação visual */
+}
+
+/* Estilos para o botão de lixeira */
+.delete-button {
+  background-color: #ff3333; /* Vermelho */
+  color: #fff; /* Texto branco */
+  border: none;
+  padding: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.delete-button:hover {
+  background-color: #f49b9b; /* Vermelho mais escuro */
+}
+
+/* Estilos para as colunas "Pedidos de Oração" e "Respostas de Oração" */
+#todo-column,
+#done-column {
+  background-color: #f9f9f9; /* Cor de fundo ligeiramente diferente */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombreamento mais pronunciado */
+  max-height: 400px; /* Altura máxima da coluna */
+  overflow-y: auto; /* Adiciona uma barra de rolagem vertical quando necessário */
+}
+
+/* Adicione estilos específicos para a barra de rolagem, se necessário */
+#todo-column::-webkit-scrollbar,
+#done-column::-webkit-scrollbar {
+  width: 8px;
+}
+
+#todo-column::-webkit-scrollbar-thumb,
+#done-column::-webkit-scrollbar-thumb {
+  background-color: #4CAF50; /* Cor da alça da barra de rolagem */
+  border-radius: 8px; /* Borda arredondada da alça */
+}
+
+#todo-column::-webkit-scrollbar-track,
+#done-column::-webkit-scrollbar-track {
+  background-color: #f9f9f9; /* Cor do fundo da barra de rolagem */
+  border-radius: 8px; /* Borda arredondada do fundo da barra de rolagem */
+}
+
+/* Adicione estilos para o indicador de rolagem quando a barra é clicada e arrastada */
+#todo-column::-webkit-scrollbar-thumb:active,
+#done-column::-webkit-scrollbar-thumb:active {
+  background-color: #45a049; /* Cor mais escura quando a alça é clicada e arrastada */
+}

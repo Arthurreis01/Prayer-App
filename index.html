@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>App pedidos de oração GO-05</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.18.0/font/bootstrap-icons.css">
+</head>
+<body>
+
+<div id="pagina-inicial">
+
+  <img id = "image" src="images/Capa.png" alt="Capa da imagem">
+</div>
+<div id="link-board">
+  <div class="column" id="column1">
+    <h2>Lições da Semana</h2>
+    <button onclick="addNewTextbox('column1')">Adicionar caixa de texto</button>
+  </div>
+
+  <div class="column" id="column2">
+    <h2>Aplicações</h2>
+    <button onclick="addNewTextbox('column2')">Adicionar caixa de texto</button>
+  </div>
+</div>
+
+<div class="kanban-container">
+  <div class="column" id="todo-column" ondrop="handleDrop(event)" ondragover="allowDrop(event)">
+    <h2>Pedidos de Oração</h2>
+    <button onclick="addNewTask('todo-column')">Adicionar novo pedido</button>
+  </div>
+  
+  <div class="column" id="done-column" ondrop="handleDrop(event)" ondragover="allowDrop(event)">
+    <h2>Respostas de Oração</h2>
+    <button onclick="addNewTask('done-column')">Adicionar novo pedido</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+  function addNewTextbox(columnId) {
+    var column = document.getElementById(columnId);
+    var newInput = document.createElement("input");
+    newInput.type = "text";
+    column.appendChild(newInput);
+  }
+</script>
+</body>
+</html>
